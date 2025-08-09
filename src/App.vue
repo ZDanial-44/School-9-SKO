@@ -1,31 +1,49 @@
+<script setup>
+import { ref } from 'vue'
+import { RouterView } from 'vue-router'
+
+import Header from './components/MainHeader.vue'  
+import SideBar from './components/SideBar.vue'
+
+const lang = ref('kz')
+
+const setLang = (newLang) => {
+  lang.value = newLang
+}
+
+const sidebarOpen = ref(true)
+const toggleSidebar = () => {
+  sidebarOpen.value = !sidebarOpen.value
+}
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/HelloWorld">Hello world</router-link>
-  </nav>
-  <router-view/>
+  <Header 
+    :lang="lang" 
+    @changeLang="setLang" 
+    @toggleSidebar="toggleSidebar"
+  />
+
+  <div class="header-spacer"></div>
+
+  <SideBar 
+    :lang="lang" 
+    v-show="sidebarOpen"
+  />
+  
+  <RouterView v-slot="{ Component }">
+    <component :is="Component" :lang="lang" />
+  </RouterView>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--color-bg);
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.header-spacer {
+  height: 11%;
 }
 </style>
