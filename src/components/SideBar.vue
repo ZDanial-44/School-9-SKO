@@ -4,7 +4,7 @@
       <li v-for="route in routes" :key="route.path" class="sidebar-item">
         <RouterLink :to="route.path" class="sidebar-link">
           <span class="sidebar-link-text">
-            {{ route.meta.title[lang] }}
+            {{ route.meta?.title?.[lang] || route.name }}
           </span>
         </RouterLink>
       </li>
@@ -13,23 +13,11 @@
 </template>
 
 <script setup>
-import { routes } from '../router/index.js'
-import { computed } from 'vue'
-
-const props = defineProps({ lang: String, isOpen: Boolean })
-
-const sidebarRoutes = computed(() =>
-  routes.filter(route => route.name && route.path)
-)
-
-const titles = computed(() =>
-  sidebarRoutes.value.map(route =>
-    route.name
-  )
-)
-const paths = computed(() =>
-  sidebarRoutes.value.map(route => route.path)
-)
+import { routes } from "../router/index.js";
+const props = defineProps({
+  lang: String,
+  isOpen: Boolean,
+});
 </script>
 
 <style scoped>
@@ -63,6 +51,7 @@ const paths = computed(() =>
   cursor: pointer;
   position: relative;
 }
+
 .sidebar-item:hover {
   transform: scale(1.05);
   background-color: var(--color-primary-one);
@@ -86,5 +75,4 @@ const paths = computed(() =>
   text-decoration: none;
   color: inherit;
 }
-
 </style>

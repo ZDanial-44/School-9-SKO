@@ -67,7 +67,7 @@
       </svg>
     </div>
 
-    <div class="footer">
+    <div class="footer sticky-index">
       <p class="footer-item-paragraph">
         <span class="footer-item">
           {{ lang === "kz" ? "Қабылдау бөлмесі: 47-51-89" : "Приемная: 47-51-89" }}
@@ -123,13 +123,16 @@ defineProps({ lang: String });
 }
 
 .sticky-index {
+  text-align: center;
   position: sticky;
   z-index: 9;
   top: 20px;
-  left: 20px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 10;
+  display: block; 
+  width: fit-content;
 }
-
 .banner {
   font-size: 30px;
   background-color: var(--color-accent);
