@@ -104,6 +104,7 @@ const blocks = computed(() =>
   <div class="page">
     <SampleTwo
       v-for="(block, idx) in blocks"
+      :lang="props.lang" 
       :key="idx"
       :to="block.to"
       :titleLeft="block.titleLeft"
@@ -118,17 +119,18 @@ const blocks = computed(() =>
 
 <style scoped>
 .header-spacer {
-  margin-top: 9%;
+  margin-top: 12%;
   margin-bottom: 1.5%;
 }
 
 .main-title {
-  margin-left: -68%;
+  margin-left: 8%;
   color: var(--color-bg);
   display: inline;
   background-color: var(--color-accent);
   border-radius: 0px 40px 0px 40px;
-  padding: 10px 20px;
+  padding: 10px 30px;
+  font-size: 50px;
 }
 
 .page {

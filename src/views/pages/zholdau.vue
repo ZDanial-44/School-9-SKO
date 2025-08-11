@@ -1,4 +1,5 @@
 <template>
+
   <div class="page">
     <SampleOne
       v-for="(block, idx) in blocks"

@@ -89,9 +89,10 @@ const imageRightSrc = computed(() => resolveImage(props.imageRight))
   display: flex;
   gap: 48px;
   justify-content: space-evenly;
+  width: 90%;
+  margin-left: 5%;
 }
 .news-block__column {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -101,18 +102,19 @@ const imageRightSrc = computed(() => resolveImage(props.imageRight))
 
 .right-column {
   margin-top: -10%;
+  flex: 1 1 50%;
 }
 
-.news-block__image__korobka {
-  width: 500px;
+.left-column {
+  flex: 1 1 50%;
 }
+
 .news-block__image-wrapper {
   display: block;
 }
 .news-block__image {
   position: relative;
   width: 300px;
-  height: 300px;
   height: auto;
   display: block;
   z-index: 1;
@@ -132,7 +134,8 @@ const imageRightSrc = computed(() => resolveImage(props.imageRight))
   position: relative; 
   z-index: 2;
   background: var(--color-accent);
-  padding: 12px 16px;
+  padding: 16px;
+  text-align: center;
   border-radius: 50px 0px 50px 0; 
   display: block;
   font-size: 1.2em;
