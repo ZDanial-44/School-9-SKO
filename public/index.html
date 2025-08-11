@@ -15,3 +15,10 @@
     <!-- built files will be auto injected -->
   </body>
 </html>
+
+<script>
+  if (sessionStorage.redirect) {
+    history.replaceState(null, null, sessionStorage.redirect)
+    sessionStorage.removeItem('redirect')
+  }
+</script>
