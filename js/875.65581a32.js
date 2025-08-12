@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[875],{1875:function(n,u,e){e.r(u),e.d(u,{default:function(){return t}});var r=e(6768);function l(n,u){return(0,r.uX)(),(0,r.CE)("div",null,u[0]||(u[0]=[(0,r.Lk)("p",null," Senimen Bolashaq vue ",-1)]))}var c=e(1241);const o={},s=(0,c.A)(o,[["render",l]]);var t=s}}]);
-//# sourceMappingURL=875.65581a32.js.map
