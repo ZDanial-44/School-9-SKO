@@ -1,4 +1,3 @@
-// fetchData.js
 import { ref, onMounted } from "vue";
 
 export function useFetchData(resourceName) {
