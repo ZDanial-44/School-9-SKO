@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import SampleTwo from '../components/SpTwo.vue'
 
 const props = defineProps({
@@ -9,88 +9,28 @@ const props = defineProps({
   },
 });
 
-const blocksData = [
-  {
-    to: {
-      kz: "/news/ministerstvo-daryn-kz",
-      ru: "/news/ministerstvo-daryn-ru"
-    },
-    titleLeft: {
-      kz: "Қазақстан Республикасының Мәдениет және ақпарат министрлігі «Дарын» мемлекеттік жастар сыйлығына байқау жариялайды",
-      ru: "Министерство культуры и информации РК объявляет конкурс на премию «Дарын»"
-    },
-    imageLeft: "62fb5f10245.jpg",
-    contentLeft: {
-      kz: "«Дарын» мемлекеттік жастар сыйлығы – ғылым, шығармашылық, қоғамдық қызмет салаларында үздік жетістіктерге қол жеткізген жас таланттарды қолдау мақсатында тағайындалады.",
-      ru: "Государственная молодежная премия «Дарын» присуждается за выдающиеся достижения в науке, творчестве и общественной деятельности."
-    },
-    titleRight: {
-      kz: "Шұғыл қызмет телефондары",
-      ru: "Телефоны экстренных служб"
-    },
-    imageRight: "IMG_20250723_2.jpg",
-    contentRight: {
-      kz: "101 – Өртке қарсы қызмет\n102 – Полиция\n103 – Жедел медициналық көмек",
-      ru: "101 – Пожарная служба\n102 – Полиция\n103 – Скорая медицинская помощь"
-    }
-  },{
-    to: {
-      kz: "/news/ministerstvo-daryn-kz",
-      ru: "/news/ministerstvo-daryn-ru"
-    },
-    titleLeft: {
-      kz: "Қазақстан Республикасының Мәдениет және ақпарат министрлігі «Дарын» мемлекеттік жастар сыйлығына байқау жариялайды",
-      ru: "Министерство культуры и информации РК объявляет конкурс на премию «Дарын»"
-    },
-    imageLeft: "62fb5f10245.jpg",
-    contentLeft: {
-      kz: "«Дарын» мемлекеттік жастар сыйлығы – ғылым, шығармашылық, қоғамдық қызмет салаларында үздік жетістіктерге қол жеткізген жас таланттарды қолдау мақсатында тағайындалады.",
-      ru: "Государственная молодежная премия «Дарын» присуждается за выдающиеся достижения в науке, творчестве и общественной деятельности."
-    },
-    titleRight: {
-      kz: "Шұғыл қызмет телефондары",
-      ru: "Телефоны экстренных служб"
-    },
-    imageRight: "IMG_20250723_2.jpg",
-    contentRight: {
-      kz: "101 – Өртке қарсы қызмет\n102 – Полиция\n103 – Жедел медициналық көмек",
-      ru: "101 – Пожарная служба\n102 – Полиция\n103 – Скорая медицинская помощь"
-    }
-  },{
-    to: {
-      kz: "/news/ministerstvo-daryn-kz",
-      ru: "/news/ministerstvo-daryn-ru"
-    },
-    titleLeft: {
-      kz: "Қазақстан Республикасының Мәдениет және ақпарат министрлігі «Дарын» мемлекеттік жастар сыйлығына байқау жариялайды",
-      ru: "Министерство культуры и информации РК объявляет конкурс на премию «Дарын»"
-    },
-    imageLeft: "62fb5f10245.jpg",
-    contentLeft: {
-      kz: "«Дарын» мемлекеттік жастар сыйлығы – ғылым, шығармашылық, қоғамдық қызмет салаларында үздік жетістіктерге қол жеткізген жас таланттарды қолдау мақсатында тағайындалады.",
-      ru: "Государственная молодежная премия «Дарын» присуждается за выдающиеся достижения в науке, творчестве и общественной деятельности."
-    },
-    titleRight: {
-      kz: "Шұғыл қызмет телефондары",
-      ru: "Телефоны экстренных служб"
-    },
-    imageRight: "IMG_20250723_2.jpg",
-    contentRight: {
-      kz: "101 – Өртке қарсы қызмет\n102 – Полиция\n103 – Жедел медициналық көмек",
-      ru: "101 – Пожарная служба\n102 – Полиция \n 103 – Скорая медицинская помощь"
-    }
-  },
-];
+const blocksData = ref([]);
+
+onMounted(async () => {
+  try {
+    const res = await fetch("https://8dbdf988a0f02b37.mokky.dev/News");
+    if (!res.ok) throw new Error("Ошибка загрузки данных");
+    const data = await res.json();
+    blocksData.value = data;
+  } catch (err) {
+    console.error(err);
+  }
+});
 
 const blocks = computed(() =>
-  blocksData.map((b) => ({
-    to: b.to[props.lang],
-    titleLeft: b.titleLeft[props.lang],
-    imageLeft: b.imageLeft,
-    contentLeft: b.contentLeft[props.lang],
-    titleRight: b.titleRight[props.lang],
-    imageRight: b.imageRight,
-    contentRight: b.contentRight[props.lang],
+  (blocksData.value || []).map((b) => ({
+    to: b?.to?.[props.lang] || "",
+    titleLeft: b?.titleLeft?.[props.lang] || "",
+    imageLeft: b?.imageLeft || "",
+    contentLeft: b?.contentLeft?.[props.lang] || "",
+    titleRight: b?.titleRight?.[props.lang] || "",
+    imageRight: b?.imageRight || "",
+    contentRight: b?.contentRight?.[props.lang] || "",
   }))
 );
 </script>
@@ -100,11 +40,12 @@ const blocks = computed(() =>
     <h1 class="main-title">
       {{ lang === 'kz' ? 'Жаңалықтар' : 'Новости' }}
     </h1>
-  </div> <!--вроде не обязательно но если убрать все рухнет-->
-  <div class="page">
+  </div>
+
+  <div class="page" v-if="blocks.length">
     <SampleTwo
       v-for="(block, idx) in blocks"
-      :lang="props.lang" 
+      :lang="props.lang"
       :key="idx"
       :to="block.to"
       :titleLeft="block.titleLeft"
@@ -115,7 +56,12 @@ const blocks = computed(() =>
       :contentRight="block.contentRight"
     />
   </div>
+
+  <div v-else>
+    <p>Загрузка данных...</p>
+  </div>
 </template>
+
 
 <style scoped>
 .header-spacer {
