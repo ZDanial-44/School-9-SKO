@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import SampleTwo from '../components/SpTwo.vue'
+import SampleTwo from "../components/SpTwo.vue";
+import { useFetchData } from "../fetchData.js";
 
 const props = defineProps({
   lang: {
@@ -9,18 +10,8 @@ const props = defineProps({
   },
 });
 
-const blocksData = ref([]);
+const { blocksData, loading, error } = useFetchData("News");
 
-onMounted(async () => {
-  try {
-    const res = await fetch("https://8dbdf988a0f02b37.mokky.dev/News");
-    if (!res.ok) throw new Error("Ошибка загрузки данных");
-    const data = await res.json();
-    blocksData.value = data;
-  } catch (err) {
-    console.error(err);
-  }
-});
 
 const blocks = computed(() =>
   (blocksData.value || []).map((b) => ({
@@ -38,7 +29,7 @@ const blocks = computed(() =>
 <template>
   <div class="header-spacer">
     <h1 class="main-title">
-      {{ lang === 'kz' ? 'Жаңалықтар' : 'Новости' }}
+      {{ lang === "kz" ? "Жаңалықтар" : "Новости" }}
     </h1>
   </div>
 
@@ -58,10 +49,11 @@ const blocks = computed(() =>
   </div>
 
   <div v-else>
-    <p>Загрузка данных...</p>
+    <p class="loading-text">
+      {{ lang === "kz" ? "Деректер жүктелуде..." : "Загрузка данных..." }}
+    </p>
   </div>
 </template>
-
 
 <style scoped>
 .header-spacer {
@@ -80,6 +72,7 @@ const blocks = computed(() =>
 }
 
 .page {
+  margin-top: 0%;
   display: flex;
   flex-direction: column;
   gap: 24px;

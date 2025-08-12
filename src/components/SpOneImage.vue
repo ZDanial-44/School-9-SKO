@@ -30,8 +30,9 @@ const props = defineProps({
   max-width: 480px;
   background-color: var(--color-primary-dark);
   color: var(--color-bg);
-  padding: 5px 15px;
+  padding: 5px 30px;
   border-radius: 0px 40px 0px 40px;
+  font-size: 50px;
 }
 
 .central-block {

@@ -23,3 +23,15 @@ a {
   left: 60%;
   transform: translateX(-50%);
 }
+
+.loading-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+}
+
+.page {
+  margin-top: 11%;
+}

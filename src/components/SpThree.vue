@@ -11,7 +11,10 @@
           <div class="news-block__content">
             <div class="news-block__image__korobka" v-if="imageLeftSrc">
               <RouterLink :to="to" class="news-block__image-wrapper">
-                <img :src="imageLeftSrc" :alt="titleLeft" class="news-block__image" />
+                <img 
+                class="news-block__image"
+                :src="imageLeftSrc" 
+                :alt="titleLeft" />
               </RouterLink>
             </div>
             <span class="content-text" v-if="contentLeft">
@@ -36,7 +39,10 @@
           <div class="news-block__content">
             <div class="news-block__image__korobka" v-if="imageRightSrc">
               <RouterLink :to="to" class="news-block__image-wrapper">
-                <img :src="imageRightSrc" :alt="titleRight" class="news-block__image" />
+                <img 
+                class="news-block__image"
+                :src="imageRightSrc" 
+                :alt="titleRight" />
               </RouterLink>
             </div>
             <span class="content-text" v-if="contentRight">
@@ -73,12 +79,12 @@ const props = defineProps({
 function resolveImage(image) {
   if (!image) return null;
   if (/^https?:\/\//.test(image)) return image;
-  
+
   try {
     // Используем require.context для Webpack
     return require(`../assets/images/${image}`);
   } catch (e) {
-    console.error('Image not found:', image);
+    console.error("Image not found:", image);
     return null;
   }
 }
