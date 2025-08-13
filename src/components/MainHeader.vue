@@ -34,13 +34,13 @@ const route = useRoute()
 
 <style scoped>
 .header {
-  position: fixed; top: 0; left: 0; right: 0;
+  position: fixed;
+  top: 0; left: 0; right: 0;
   min-height: 80px;
   height: 11%;
   background-color: var(--color-primary);
   color: var(--color-white);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
@@ -48,24 +48,33 @@ const route = useRoute()
 }
 
 .left {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  height: 100px; /* равна .header */
-  margin: auto;
+  height: 100px;
 }
+
+.news-link{
+  width: 52px;
+  margin-right: 12px;
+}  
 
 .logo {
   width: 50px;
-  height: 50px;
+  height: auto;
   object-fit: contain;
-  margin-right: 12px;
+}
+.logo:hover {
+  width: 52px;
 }
 
 .school-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; /* равна .header */
+  height: 100%;
 }
 
 .school-info h1 {
@@ -82,6 +91,7 @@ const route = useRoute()
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
 }
 
 .lang-switcher button {
@@ -103,6 +113,7 @@ const route = useRoute()
 .home-text {
   font-weight: bold;
   width: 160px;
+  text-align: right;
 }
 
 .burger-btn {

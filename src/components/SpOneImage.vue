@@ -52,6 +52,7 @@ const props = defineProps({
   overflow: hidden;
   border-radius: 50%;
   border: solid 4px var(--color-accent);
+  transition: border-radius 1s ease;
 }
 
 .central-block-image {
@@ -59,5 +60,14 @@ const props = defineProps({
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  transition: border-radius 1s ease;
+}
+
+.central-block-image:hover {
+  border-radius: 0px;
+}
+
+.central-block-content:hover{
+  border-radius: 0% 25%;
 }
 </style>

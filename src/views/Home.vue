@@ -14,12 +14,10 @@
       class="school-image"
     /><br />
 
-    <div class="relative-index">
-      <RouterLink to="/news" class="news-link">
-        <h3 class="news banner">
-          {{ lang === "kz" ? "Жаңалықтар" : "Новости" }}
-        </h3>
-      </RouterLink>
+    <div class="relative-index" @click="scrollDown">
+      <h3 class="news banner">
+        {{ lang === "kz" ? "Жаңалықтар" : "Новости" }}
+      </h3>
     </div>
 
     <div class="elementor-shape elementor-shape-top" data-negative="false">
@@ -129,6 +127,13 @@
 <script setup>
 import News from "./News.vue";
 defineProps({ lang: String });
+
+function scrollDown() {
+  window.scrollTo({
+    top: window.scrollY + window.innerHeight * 1,
+    behavior: "smooth"
+  });
+}
 </script>
 
 <style scoped>

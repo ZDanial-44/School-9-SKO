@@ -8,31 +8,40 @@ const props = defineProps({
   lang: { type: String, default: "kz" },
   dbName: { type: String, required: true },
   mainImageName: { type: String, required: true },
+  mainImageNameLang: { type: String, default: "" }
 });
 
 const { blocksData, loading, error } = useFetchData(props.dbName);
 
 const imageUrl = ref("");
 
-async function loadImage(name) {
-  if (!name) {
+function getImageFileName() {
+  if (props.mainImageNameLang) {
+    return props.mainImageNameLang.replace("{lang}", props.lang);
+  }
+  return props.mainImageName;
+}
+
+async function loadImage() {
+  const fileName = getImageFileName();
+  if (!fileName) {
     imageUrl.value = "";
     return;
   }
 
   try {
-    const mod = await import(`../assets/images/${name}`);
+    const mod = await import(`../assets/images/pages/sampleOne/${fileName}`);
     imageUrl.value = mod?.default || mod;
   } catch (e) {
-    console.error(`Не удалось загрузить изображение ${name}`, e);
+    console.error(`Не удалось загрузить изображение ${fileName}`, e);
     imageUrl.value = "";
   }
 }
 
-onMounted(() => loadImage(props.mainImageName));
-watch(() => props.mainImageName, (n) => loadImage(n));
+onMounted(loadImage);
 
-// подготовка блоков под язык
+watch([() => props.lang, () => props.mainImageName, () => props.mainImageNameLang], loadImage);
+
 const blocks = computed(() => {
   const arr = Array.isArray(blocksData.value) ? blocksData.value : [];
   return arr.map((b) => ({

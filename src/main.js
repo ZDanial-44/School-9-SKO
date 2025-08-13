@@ -9,7 +9,6 @@ const app = createApp(App)
 app.use(store)
 app.use(router)
 
-// глобальная регистрация
-app.component('FinalSampleOne', FinalSampleOne)
+ app.component('FinalSampleOne', FinalSampleOne)
 
 app.mount('#app')
