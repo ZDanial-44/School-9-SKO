@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[6888],{6888:function(s,e,o){s.exports=o.p+"img/psychologist-1-ru.8159246d.jpg"}}]);
