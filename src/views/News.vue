@@ -12,7 +12,6 @@ const props = defineProps({
 
 const { blocksData, loading, error } = useFetchData("News");
 
-
 const blocks = computed(() =>
   (blocksData.value || []).map((b) => ({
     to: b?.to?.[props.lang] || "",
@@ -36,8 +35,8 @@ const blocks = computed(() =>
   <div class="page" v-if="blocks.length">
     <SampleTwo
       v-for="(block, idx) in blocks"
-      :lang="props.lang"
       :key="idx"
+      :lang="props.lang"
       :to="block.to"
       :titleLeft="block.titleLeft"
       :imageLeft="block.imageLeft"

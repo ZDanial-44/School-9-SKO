@@ -26,7 +26,7 @@
 import { computed } from 'vue'
 import SampleOne from '../components/SpOne.vue'
 import SampleOneImage from '../components/SpOneImage.vue'
-import logoImage from '../assets/images/62fb5f10245.jpg'
+import logoImage from '../assets/images/method.jpg'
 
 const props = defineProps({
   lang: {
