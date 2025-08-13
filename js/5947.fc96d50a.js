@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[5947],{5947:function(e,s,u){e.exports=u.p+"img/Снимок экрана 2025-07-22 114642.a74fb0d6.png"}}]);

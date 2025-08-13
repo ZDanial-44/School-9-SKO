@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[8855],{8855:function(n,u,e){e.r(u),e.d(u,{default:function(){return o}});var l=e(6768),r=e(8121),t={__name:"WhoProject",props:{lang:String},setup(n){return(u,e)=>((0,l.uX)(),(0,l.CE)("div",null,[(0,l.bF)(r.A,{lang:n.lang},null,8,["lang"])]))}};const a=t;var o=a}}]);
+//# sourceMappingURL=8855.f275cacc.js.map

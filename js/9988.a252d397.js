@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[9988],{9988:function(e,s,u){e.exports=u.p+"img/gosuslugi.dbe6c54f.jpeg"}}]);

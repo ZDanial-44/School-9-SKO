@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[3961],{3961:function(c,e,s){c.exports=s.p+"img/ЕНТ-1.7c994fdc.png"}}]);
