@@ -49,7 +49,7 @@ const props = defineProps({
   border-bottom: 2px solid var(--color-primary-dark);
   border-top: 2px solid var(--color-accent);
   border-left: 3px solid var(--color-accent);
-  border-radius: 15px;
+  border-radius: 20px 5px;
   padding: 12px;
   margin: 16px 0 8px 0;
   font-weight: bold;

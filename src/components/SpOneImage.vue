@@ -6,7 +6,7 @@
     <span
       class="central-block-content"
       :style="containerStyle"
-      @mouseenter="expandToContain"
+      @mousemove="handleMouseMove"
       @mouseleave="resetSize"
     >
       <img
@@ -59,27 +59,43 @@ function expandToContain() {
 
   const aspect = naturalWidth / naturalHeight;
 
-  let newWidth, newHeight;
-  if (aspect > 1) {
-    newWidth = defaultSize;
-    newHeight = defaultSize / aspect;
-  } else {
-    newWidth = defaultSize * aspect;
-    newHeight = defaultSize;
-  }
+  const newHeight = defaultSize; 
+  let newWidth = newHeight * aspect; 
 
-  newWidth *= 1.3;
-  newHeight *= 1.3;
+  newWidth *= 1.05;
 
-  containerStyle.value.width = newWidth + "px";
   containerStyle.value.height = newHeight + "px";
+  containerStyle.value.width = newWidth + "px";
   containerStyle.value.borderRadius = "0% 175px";
 }
 
+
 function resetSize() {
-  containerStyle.value.width = defaultSize + "px";
   containerStyle.value.height = defaultSize + "px";
+  containerStyle.value.width = defaultSize + "px";
   containerStyle.value.borderRadius = "50%";
+}
+
+
+function handleMouseMove(e) {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  const mouseX = e.clientX - rect.left;
+  const mouseY = e.clientY - rect.top;
+
+  const distFromCenter = Math.sqrt(
+    Math.pow(mouseX - centerX, 2) + Math.pow(mouseY - centerY, 2)
+  );
+
+  const maxDist = Math.min(rect.width, rect.height) / 2;
+
+  // if (distFromCenter < maxDist * 0.7) { если курсор ближе чем 70% от радиуса — включаем увеличение
+  if (distFromCenter < maxDist * 0.8) {
+    expandToContain();
+  } else {
+    resetSize();
+  }
 }
 </script>
 
@@ -101,45 +117,14 @@ function resetSize() {
   margin-left: -10%;
 }
 
-.central-block-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 1s ease;
-}
-</style>
-
-
-<style scoped>
-.home-text {
-  max-width: 480px;
-  background-color: var(--color-primary-dark);
-  color: var(--color-bg);
-  padding: 5px 30px;
-  border-radius: 0px 40px 0px 40px;
-  font-size: 50px;
-}
-
-.central-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-left: -10%;
-}
-
 .central-block-content {
-  width: 450px;
-  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border-radius: 50%;
-  border: solid 4px var(--color-accent);
   transition: border-radius 1s ease;
 }
-
 
 .central-block-image {
   width: 100%;

@@ -1,48 +1,62 @@
 <template>
-  <div class="news-block two-columns">
-    <div class="left-column">
+  <div
+    v-if="hasLeft || hasRight"
+    class="news-block two-columns"
+  >
+    <!-- Левая колонка -->
+    <div class="left-column" v-if="hasLeft">
       <div class="news-block__column">
         <div class="news-block__header__korobka">
-            <div class="news-block__header-text">
-          <RouterLink :to="to" class="news-block__header">
+          <div class="news-block__header-text" v-if="titleLeft">
+            <RouterLink :to="to" class="news-block__header">
               {{ titleLeft }}
-          </RouterLink>
+            </RouterLink>
+          </div>
+          <div class="news-block__content">
+            <div class="news-block__image__korobka" v-if="imageLeftSrc">
+              <RouterLink :to="to" class="news-block__image-wrapper">
+                <img
+                  :src="imageLeftSrc"
+                  :alt="titleLeft"
+                  class="news-block__image"
+                />
+              </RouterLink>
             </div>
-            <div class="news-block__content">
-              <div class="news-block__image__korobka" v-if="imageLeftSrc">
-                <RouterLink :to="to" class="news-block__image-wrapper">
-                  <img :src="imageLeftSrc" :alt="titleLeft" class="news-block__image" />
-                </RouterLink>
-              </div>
-              <span class="content-text" v-if="contentLeft">
-                <slot name="left">
-                  {{ contentLeft }}
-                </slot>
-              </span>
-            </div>
+            <span class="content-text" v-if="contentLeft">
+              <slot name="left">
+                {{ contentLeft }}
+              </slot>
+            </span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="right-column">
+
+    <!-- Правая колонка -->
+    <div class="right-column" v-if="hasRight">
       <div class="news-block__column">
         <div class="news-block__header__korobka">
-            <div class="news-block__header-text">
-          <RouterLink :to="to" class="news-block__header">
+          <div class="news-block__header-text" v-if="titleRight">
+            <RouterLink :to="to" class="news-block__header">
               {{ titleRight }}
-          </RouterLink>
+            </RouterLink>
+          </div>
+          <div class="news-block__content">
+            <div class="news-block__image__korobka" v-if="imageRightSrc">
+              <RouterLink :to="to" class="news-block__image-wrapper">
+                <img
+                  :src="imageRightSrc"
+                  :alt="titleRight"
+                  class="news-block__image"
+                />
+              </RouterLink>
             </div>
-            <div class="news-block__content">
-                <div class="news-block__image__korobka" v-if="imageRightSrc">
-                  <RouterLink :to="to" class="news-block__image-wrapper">
-                    <img :src="imageRightSrc" :alt="titleRight" class="news-block__image" />
-                  </RouterLink>
-                </div>
-                <span class="content-text" v-if="contentRight">
-                  <slot name="right">
-                    {{ contentRight }}
-                  </slot>
-                </span>
-            </div>
+            <span class="content-text" v-if="contentRight">
+              <slot name="right">
+                {{ contentRight }}
+              </slot>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -50,38 +64,41 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
-import { RouterLink } from 'vue-router'
-import { computed } from 'vue'
-
-const route = useRoute()
+import { RouterLink } from "vue-router";
+import { computed } from "vue";
 
 const props = defineProps({
   lang: String,
   to: { type: [String, Object], required: true },
-  titleLeft: { type: String, required: true },
+  titleLeft: { type: String, default: "" },
   imageLeft: { type: String, default: null },
-  contentLeft: { type: String, default: '' },
-  titleRight: { type: String, required: true },
+  contentLeft: { type: String, default: "" },
+  titleRight: { type: String, default: "" },
   imageRight: { type: String, default: null },
-  contentRight: { type: String, default: '' }
-})
+  contentRight: { type: String, default: "" },
+});
 
 function resolveImage(image) {
   if (!image) return null;
   if (/^https?:\/\//.test(image)) return image;
-  
+
   try {
-    // Используем require.context для Webpack
     return require(`../assets/images/${image}`);
   } catch (e) {
-    console.error('Image not found:', image);
+    console.error("Image not found:", image);
     return null;
   }
 }
 
-const imageLeftSrc = computed(() => resolveImage(props.imageLeft))
-const imageRightSrc = computed(() => resolveImage(props.imageRight))
+const imageLeftSrc = computed(() => resolveImage(props.imageLeft));
+const imageRightSrc = computed(() => resolveImage(props.imageRight));
+
+const hasLeft = computed(
+  () => props.titleLeft || props.imageLeft || props.contentLeft
+);
+const hasRight = computed(
+  () => props.titleRight || props.imageRight || props.contentRight
+);
 </script>
 
 <style scoped>
