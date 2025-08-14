@@ -67,10 +67,10 @@
 
     <div class="footer relative-index">
       <p class="footer-item-paragraph">
+        <span class="footer-item">https://school9sko.edu.kz/</span>
         <span class="footer-item">
           {{ lang === "kz" ? "Қабылдау бөлмесі: 47-51-89" : "Приемная: 47-51-89" }}
         </span>
-        <span class="footer-item">www.reallygreatsite.com</span>
       </p>
     </div>
   </div>
@@ -130,7 +130,7 @@ defineProps({ lang: String });
 
 function scrollDown() {
   window.scrollTo({
-    top: window.scrollY + window.innerHeight * 1,
+    top: window.scrollY + window.innerHeight * 1 ,
     behavior: "smooth"
   });
 }
@@ -202,7 +202,7 @@ function scrollDown() {
 .footer {
   position: relative;
   z-index: 2;
-  width: 490px;
+  width: 520px;
   margin-top: 40px;
 }
 
