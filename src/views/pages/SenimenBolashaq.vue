@@ -1,7 +1,3 @@
 <template>
-    <div>
-        <p>
-            Senimen Bolashaq vue
-        </p>
-    </div>
+  <FinalSampleOne dbName="SenimenBolashaq" mainImageNameLang="SenimenBolashaq/SenimenBolashaq-{lang}.jpeg" />
 </template>

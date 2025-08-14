@@ -1,3 +1,5 @@
 <template>
-  <FinalSampleOne dbName="unt" mainImageNameLang="unt-{lang}.png" />
+  <h2 class="page">
+    Director`s-blog
+  </h2>
 </template>
