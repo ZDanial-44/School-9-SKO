@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[6658],{6658:function(e,s,c){e.exports=c.p+"img/methodImage14.3fc6b162.png"}}]);
