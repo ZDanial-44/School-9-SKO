@@ -2,9 +2,9 @@
   <div class="wrapper">
     <div class="left-content-vrapper">
       <p class="left-content-top" v-if="titleLeft">
-        <a :href="to" target="_blank" rel="noopener noreferrer">
+        <RouterLink :to="to">
           {{ titleLeft }}
-        </a>
+        </RouterLink>
       </p>
       <p class="left-content-bottom" v-if="contentLeft">
         {{ contentLeft }}
