@@ -35,3 +35,14 @@ a {
 .page {
   margin-top: 11%;
 }
+
+.pageFour {
+  width: 80%;
+  padding: 30px;
+  margin: auto;
+  margin-top: 11%;
+  background-color: var(--color-text-light);
+  background-color: var(--color-text-light);
+  border-top: 8px solid var(--color-accent);
+  border-bottom: 8px dashed var(--color-accent);
+}

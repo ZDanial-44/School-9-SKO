@@ -114,7 +114,7 @@ function handleMouseMove(e) {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-left: -10%;
+  margin-left: -9.5%;
 }
 
 .central-block-content {

@@ -1,60 +1,40 @@
 <template>
-  <div
-    v-if="hasLeft || hasRight"
-    class="news-block two-columns"
-  >
-    <!-- Левая колонка -->
+  <div v-if="hasLeft || hasRight" class="news-block two-columns">
     <div class="left-column" v-if="hasLeft">
       <div class="news-block__column">
         <div class="news-block__header__korobka">
           <div class="news-block__header-text" v-if="titleLeft">
-            <RouterLink :to="to" class="news-block__header">
-              {{ titleLeft }}
-            </RouterLink>
+            <RouterLink :to="to" class="news-block__header">{{ titleLeft }}</RouterLink>
           </div>
           <div class="news-block__content">
             <div class="news-block__image__korobka" v-if="imageLeftSrc">
               <RouterLink :to="to" class="news-block__image-wrapper">
-                <img
-                  :src="imageLeftSrc"
-                  :alt="titleLeft"
-                  class="news-block__image"
-                />
+                <img :src="imageLeftSrc" :alt="titleLeft" class="news-block__image" />
               </RouterLink>
             </div>
             <span class="content-text" v-if="contentLeft">
-              <slot name="left">
-                {{ contentLeft }}
-              </slot>
+              <slot name="left"> {{ contentLeft }}</slot>
             </span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Правая колонка -->
+
     <div class="right-column" v-if="hasRight">
       <div class="news-block__column">
         <div class="news-block__header__korobka">
           <div class="news-block__header-text" v-if="titleRight">
-            <RouterLink :to="to" class="news-block__header">
-              {{ titleRight }}
-            </RouterLink>
+            <RouterLink :to="to" class="news-block__header">{{ titleRight }}</RouterLink>
           </div>
           <div class="news-block__content">
             <div class="news-block__image__korobka" v-if="imageRightSrc">
               <RouterLink :to="to" class="news-block__image-wrapper">
-                <img
-                  :src="imageRightSrc"
-                  :alt="titleRight"
-                  class="news-block__image"
-                />
+                <img :src="imageRightSrc" :alt="titleRight" class="news-block__image" />
               </RouterLink>
             </div>
             <span class="content-text" v-if="contentRight">
-              <slot name="right">
-                {{ contentRight }}
-              </slot>
+              <slot name="right">{{ contentRight }}</slot>
             </span>
           </div>
         </div>
@@ -93,9 +73,7 @@ function resolveImage(image) {
 const imageLeftSrc = computed(() => resolveImage(props.imageLeft));
 const imageRightSrc = computed(() => resolveImage(props.imageRight));
 
-const hasLeft = computed(
-  () => props.titleLeft || props.imageLeft || props.contentLeft
-);
+const hasLeft = computed(() => props.titleLeft || props.imageLeft || props.contentLeft);
 const hasRight = computed(
   () => props.titleRight || props.imageRight || props.contentRight
 );
@@ -109,6 +87,7 @@ const hasRight = computed(
   width: 90%;
   margin-left: 5%;
 }
+
 .news-block__column {
   display: flex;
   flex-direction: column;
@@ -129,6 +108,7 @@ const hasRight = computed(
 .news-block__image-wrapper {
   display: block;
 }
+
 .news-block__image {
   position: relative;
   width: 300px;
@@ -142,18 +122,20 @@ const hasRight = computed(
   object-fit: cover;
   object-position: center center;
 }
+
 .news-block__header__korobka {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .news-block__header {
-  position: relative; 
+  position: relative;
   z-index: 2;
   background: var(--color-accent);
   padding: 16px;
   text-align: center;
-  border-radius: 50px 0px 50px 0; 
+  border-radius: 50px 0px 50px 0;
   display: block;
   font-size: 1.2em;
   font-weight: bold;
@@ -165,13 +147,13 @@ const hasRight = computed(
   height: 50px;
   padding: 0;
   background: var(--color-primary);
-  border-radius: 70px 0 0 0; 
+  border-radius: 70px 0 0 0;
 }
 
 .news-block__content {
   font-size: 1em;
   color: var(--color-text-light);
-  display: flex;               
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

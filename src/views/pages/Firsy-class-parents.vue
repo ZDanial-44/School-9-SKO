@@ -3,7 +3,9 @@ import SpOneImage from "@/components/SpOneImage.vue";
 
 import mainImage from "@/assets/images/pages/sampleOne/Firsy-class-parents-Image.jpeg";
 
-const lang = "kz";
+const props = defineProps({
+  lang: { type: String, default: "kz" },
+});
 </script>
 
 <template>

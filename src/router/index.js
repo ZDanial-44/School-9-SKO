@@ -1,6 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
+import methodLinkRoutes from './modules/methodLink';
+
 export const routes = [
+    ...methodLinkRoutes,
     {
         name: 'Home',
         path: '/',
