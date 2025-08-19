@@ -42,7 +42,14 @@ a {
   margin: auto;
   margin-top: 11%;
   background-color: var(--color-text-light);
-  background-color: var(--color-text-light);
   border-top: 8px solid var(--color-accent);
   border-bottom: 8px dashed var(--color-accent);
+}
+
+.pageFour li {
+  margin-bottom: 0.5em;
+}
+.pageFour ul {
+  border-top: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
 }

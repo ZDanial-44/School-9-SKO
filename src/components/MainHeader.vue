@@ -65,6 +65,7 @@ const route = useRoute()
   width: 50px;
   height: auto;
   object-fit: contain;
+  transition: width 0.3s ease;
 }
 .logo:hover {
   width: 52px;

@@ -8,7 +8,7 @@ const props = defineProps({
   lang: { type: String, default: "kz" },
   dbName: { type: String, required: true },
   mainImageName: { type: String, required: true },
-  mainImageNameLang: { type: String, default: "" }
+  mainImageNameLang: { type: String, default: "" },
 });
 
 const { blocksData, loading, error } = useFetchData(props.dbName);
@@ -40,7 +40,10 @@ async function loadImage() {
 
 onMounted(loadImage);
 
-watch([() => props.lang, () => props.mainImageName, () => props.mainImageNameLang], loadImage);
+watch(
+  [() => props.lang, () => props.mainImageName, () => props.mainImageNameLang],
+  loadImage
+);
 
 const blocks = computed(() => {
   const arr = Array.isArray(blocksData.value) ? blocksData.value : [];
@@ -61,14 +64,16 @@ const blocks = computed(() => {
     <p v-else-if="error" class="loading-text">{{ error }}</p>
 
     <template v-else>
-      <SampleOne
-        v-for="(block, idx) in blocks"
-        :key="idx"
-        :lang="lang"
-        :to="block.to"
-        :titleLeft="block.titleLeft"
-        :contentLeft="block.contentLeft"
-      />
+      <div class="scroll-wrapper">
+        <SampleOne
+          v-for="(block, idx) in blocks"
+          :key="idx"
+          :lang="lang"
+          :to="block.to"
+          :titleLeft="block.titleLeft"
+          :contentLeft="block.contentLeft"
+        />
+      </div>
 
       <SampleOneImage
         v-if="imageUrl"
@@ -81,6 +86,38 @@ const blocks = computed(() => {
 </template>
 
 <style scoped>
-.page { padding-bottom: 5%; }
-.loading-text { text-align: center; font-size: 18px; color: gray; }
+.backgroundFrame {
+  background: repeating-linear-gradient(
+    320deg,
+    var(--color-text-light),
+    var(--color-text-light) 25px,
+    0px,
+    var(--color-white) 50px
+  );
+  padding: 50px;
+}
+
+.scroll-wrapper {
+  position: fixed;
+  top: 11%;
+  z-index: 100;
+  height: 85%;
+  padding: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.page {
+}
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
 </style>

@@ -193,6 +193,12 @@ function scrollDown() {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 45px;
+  cursor: pointer;
+  transition: padding 0.3s ease;
+}
+
+.banner:hover {
+  padding: 8px 24px;
 }
 
 .welcome {
@@ -240,4 +246,6 @@ function scrollDown() {
 .NewsComponent {
   margin-top: 400px;
 }
+
+
 </style>

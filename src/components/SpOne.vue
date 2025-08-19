@@ -2,7 +2,13 @@
   <div class="wrapper">
     <div class="left-content-vrapper">
       <p class="left-content-top" v-if="titleLeft">
-        <RouterLink :to="to">
+        <!-- если ссылка начинается с http -> обычная <a> -->
+        <a v-if="isExternalLink" :href="to" target="_blank" rel="noopener noreferrer">
+          {{ titleLeft }}
+        </a>
+
+        <!-- иначе используем RouterLink -->
+        <RouterLink v-else :to="to">
           {{ titleLeft }}
         </RouterLink>
       </p>
@@ -16,7 +22,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { RouterLink } from "vue-router";
-// import { computed } from 'vue';
+import { computed } from 'vue';
 
 const route = useRoute();
 
@@ -27,6 +33,10 @@ const props = defineProps({
   titleLeft: { type: String, required: true },
   contentLeft: { type: String, default: null },
 });
+
+const isExternalLink = computed(() =>
+  typeof props.to === "string" && props.to.startsWith("http")
+);
 </script>
 
 <style scoped>

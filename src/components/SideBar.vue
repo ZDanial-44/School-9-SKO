@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { routes } from "../router/index.js";
+import routes from "../router/modules/mainLink.js";
 const props = defineProps({
   lang: String,
   isOpen: Boolean,

@@ -91,7 +91,7 @@ function handleMouseMove(e) {
   const maxDist = Math.min(rect.width, rect.height) / 2;
 
   // if (distFromCenter < maxDist * 0.7) { если курсор ближе чем 70% от радиуса — включаем увеличение
-  if (distFromCenter < maxDist * 0.8) {
+  if (distFromCenter < maxDist * 0.4) {
     expandToContain();
   } else {
     resetSize();
