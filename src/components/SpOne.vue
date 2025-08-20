@@ -2,12 +2,10 @@
   <div class="wrapper">
     <div class="left-content-vrapper">
       <p class="left-content-top" v-if="titleLeft">
-        <!-- если ссылка начинается с http -> обычная <a> -->
         <a v-if="isExternalLink" :href="to" target="_blank" rel="noopener noreferrer">
           {{ titleLeft }}
         </a>
 
-        <!-- иначе используем RouterLink -->
         <RouterLink v-else :to="to">
           {{ titleLeft }}
         </RouterLink>
@@ -47,7 +45,7 @@ const isExternalLink = computed(() =>
   margin-left: 2%;
 }
 .left-content-vrapper {
-  flex: 0 0 40%;
+  flex: 0 0 400px;
   text-align: center;
 }
 .left-content-top {

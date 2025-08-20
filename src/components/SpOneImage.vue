@@ -132,4 +132,8 @@ function handleMouseMove(e) {
   object-fit: cover;
   transition: transform 1s ease;
 }
+
+
+@media (max-width: 1080px) {
+}
 </style>

@@ -11,6 +11,10 @@
   --color-ahmet:  #29548e;
 }
 
+.bottomP {
+  padding-bottom: 100px;
+}
+
 a {
   all: unset;
   cursor: pointer;
@@ -52,4 +56,22 @@ a {
 .pageFour ul {
   border-top: 2px solid var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
+}
+
+.pageFour h1 {
+  display: inline;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.backgroundFrame {
+  background: repeating-linear-gradient(
+    320deg,
+    var(--color-text-light),
+    var(--color-text-light) 25px,
+    0px,
+    var(--color-white) 50px
+  );
+  padding: 1px;
+  min-height: 99vh;
+  height: auto;
 }

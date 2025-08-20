@@ -29,12 +29,12 @@ export default [
     component: () => import('@/views/Vacancies.vue'),
     meta: { title: { kz: 'Бос жұмыс орындары', ru: 'Вакансии' } }
   },
-  {
-    name: 'Contacts',
-    path: '/Contacts',
-    component: () => import('@/views/Contacts.vue'),
-    meta: { title: { kz: 'Байланыс', ru: 'Контакты' } }
-  },
+  //{
+  //  name: 'Contacts',
+  //  path: '/Contacts',
+  //  component: () => import('@/views/Contacts.vue'),
+  //  meta: { title: { kz: 'Байланыс', ru: 'Контакты' } }
+  //},
   {
     name: 'Application-to-school',
     path: '/Application-to-school',

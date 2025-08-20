@@ -64,28 +64,39 @@ const blocks = computed(() => {
     <p v-else-if="error" class="loading-text">{{ error }}</p>
 
     <template v-else>
-      <div class="scroll-wrapper">
-        <SampleOne
-          v-for="(block, idx) in blocks"
-          :key="idx"
-          :lang="lang"
-          :to="block.to"
-          :titleLeft="block.titleLeft"
-          :contentLeft="block.contentLeft"
-        />
-      </div>
+      <div class="main-wrapper">
+        <div class="image-container">
+          <SampleOneImage
+            v-if="imageUrl"
+            class="central-main-content"
+            :lang="lang"
+            :imageSrc="imageUrl"
+          />
+        </div>
 
-      <SampleOneImage
-        v-if="imageUrl"
-        class="central-main-content"
-        :lang="lang"
-        :imageSrc="imageUrl"
-      />
+        <div class="scroll-wrapper">
+          <div class="bottomP">
+            <SampleOne
+              v-for="(block, idx) in blocks"
+              :key="idx"
+              :lang="lang"
+              :to="block.to"
+              :titleLeft="block.titleLeft"
+              :contentLeft="block.contentLeft"
+            />
+          </div>
+        </div>
+      </div>
     </template>
   </div>
 </template>
 
 <style scoped>
+.main-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
 .backgroundFrame {
   background: repeating-linear-gradient(
     320deg,
@@ -102,7 +113,9 @@ const blocks = computed(() => {
   top: 11%;
   z-index: 100;
   height: 85%;
-  padding: 30px;
+  left: 10px;
+  width: 400px;
+  padding: 20px 30px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
@@ -113,11 +126,19 @@ const blocks = computed(() => {
   display: none; /* Chrome, Safari */
 }
 
-.page {
-}
 .loading-text {
   text-align: center;
   font-size: 18px;
   color: gray;
+}
+
+@media (max-width: 1080px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  .scroll-wrapper {
+    margin-top: 70%;
+    position: relative;
+  }
 }
 </style>
