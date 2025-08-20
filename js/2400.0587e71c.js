@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[2400],{2400:function(n,u,e){function r(n,u){return null}e.r(u),e.d(u,{default:function(){return s}});var c=e(1241);const t={},o=(0,c.A)(t,[["render",r]]);var s=o}}]);
+//# sourceMappingURL=2400.0587e71c.js.map
