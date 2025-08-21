@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import SampleTwo from "../components/SpTwo.vue";
-import { useFetchData } from "../fetchData.js";
+import SampleTwo from "../../components/SpTwo.vue";
+import { useFetchData } from "../../fetchData.js";
 
 const props = defineProps({
   lang: {

@@ -2,31 +2,31 @@ export default [
   {
     name: 'Home',
     path: '/',
-    component: () => import('@/views/Home.vue'),
+    component: () => import('@/views/main/Home.vue'),
     meta: { title: { kz: 'Басты бет', ru: 'Главная страница' } }
   },
   {
     name: 'News',
     path: '/News',
-    component: () => import('@/views/News.vue'),
+    component: () => import('@/views/main/News.vue'),
     meta: { title: { kz: 'Жаңалықтар', ru: 'Новости' } }
   },
   {
     name: 'Virtual reception',
     path: '/Virtual reception',
-    component: () => import('@/views/VirtualReception.vue'),
+    component: () => import('@/views/main/VirtualReception.vue'),
     meta: { title: { kz: 'Виртуалды қабылдау', ru: 'Виртуальная приемная' } }
   },
   {
     name: 'Administration',
     path: '/Administration',
-    component: () => import('@/views/Administration.vue'),
+    component: () => import('@/views/main/Administration.vue'),
     meta: { title: { kz: 'Әкімшілік', ru: 'Администрация' } }
   },
   {
     name: 'Vacancies',
     path: '/Vacancies',
-    component: () => import('@/views/Vacancies.vue'),
+    component: () => import('@/views/main/Vacancies.vue'),
     meta: { title: { kz: 'Бос жұмыс орындары', ru: 'Вакансии' } }
   },
   //{
@@ -38,7 +38,7 @@ export default [
   {
     name: 'Application-to-school',
     path: '/Application-to-school',
-    component: () => import('@/views/Application-to-school.vue'),
+    component: () => import('@/views/main/Application-to-school.vue'),
     meta: { title: { kz: 'Мектепке өтінімдер', ru: 'Заявка в школу' } }
   },
   {
@@ -188,7 +188,7 @@ export default [
   {
     name: 'Director-blog',
     path: '/Director-blog',
-    component: () => import('@/views/Director-blog.vue'),
+    component: () => import('@/views/main/Director-blog.vue'),
     meta: { title: { kz: 'Директордың блогы', ru: 'Блог директора' } }
   }
 ]

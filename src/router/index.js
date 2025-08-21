@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import mainLinkRoutes from './modules/mainLink';
-import methodLinkRoutes from './modules/methodLink';
+import mainLinkRoutes from './modules/mainLink.js';
+import methodLinkRoutes from './modules/pageRoute/methodLink.js';
 
 
 export const routes = [

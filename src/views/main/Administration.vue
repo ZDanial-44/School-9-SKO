@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
-import SampleThreeA from "../components/SpThreeAdministration.vue";
-import { useFetchData } from "../fetchData.js";
+import SampleThreeA from "../../components/SpThreeAdministration.vue";
+import { useFetchData } from "../../fetchData.js";
 
 const props = defineProps({
   lang: { type: String, default: "kz" },

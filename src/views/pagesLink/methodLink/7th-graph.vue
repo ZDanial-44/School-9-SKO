@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>
-            oighawawr
+        <p class="page pageFour">
+            hjbjkb
         </p>
     </div>
 </template>

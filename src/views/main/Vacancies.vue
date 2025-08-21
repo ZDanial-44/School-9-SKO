@@ -1,5 +1,5 @@
 <script setup>
-import SampleOne from '../components/SpOne.vue'
+import SampleOne from '../../components/SpOne.vue'
 defineProps({ lang: String })
 </script>
 
