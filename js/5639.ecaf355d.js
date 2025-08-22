@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[5639],{5639:function(e,s,u){e.exports=u.p+"img/Stars-of-Demeu.1c9a74ab.jpg"}}]);

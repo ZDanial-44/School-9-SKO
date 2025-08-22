@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[342],{342:function(e,u,n){n.r(u),n.d(u,{default:function(){return l}});var t=n(6768),a=n(4232);const r={class:"page pageFour"};var s={__name:"teachers-portfolio",props:{lang:{type:String,default:"kz"}},setup(e){return(u,n)=>((0,t.uX)(),(0,t.CE)("div",r,[(0,t.Lk)("h1",null,(0,a.v_)("kz"===e.lang?"Мұғалімдер портфолиосы":"Портфолио учителей"),1)]))}};const o=s;var l=o}}]);
-//# sourceMappingURL=342.4b426f60.js.map
