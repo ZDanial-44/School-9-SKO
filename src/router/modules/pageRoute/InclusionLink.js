@@ -7,18 +7,18 @@ function getMetaTitle(name) {
 
 function Route(name) {
   return {
-    path: `/method-${name.toLowerCase()}`,
-    name: `Method${name}`,
-    component: () => import(`@/views/pagesLink/methodLink/${name}.vue`),
+    path: `/Inclusion-${name.toLowerCase()}`,
+    name: `Inclusion${name}`,
+    component: () => import(`@/views/pagesLink/InclusionLink/${name}.vue`),
     meta: {
-      title: getMetaTitle('Method')
+      title: getMetaTitle('Inclusion')
     }
   }
 }
 
 export default [
-  Route('LinkOne'),
-  Route('LinkTwo'),
+  Route('unlimited-creative'),
+  Route('experience-and-internship'),
   Route('LinkThree'),
   Route('modo'),
   Route('PresReliz'),

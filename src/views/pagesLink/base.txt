@@ -1,0 +1,74 @@
+<script setup>
+defineProps({
+  lang: String,
+});
+</script>
+
+<template>
+  <div class="backgroundFrame">
+    <div class="page pageFour">
+      <h1>
+        {{
+          lang === "kz"
+            ? "Педагогикалық кеңес 5-сыныптарда"
+            : "Педконсилиум в 5 классах"
+        }}
+      </h1>
+      <p>
+        {{ lang === "kz" ? 
+         `` 
+        :`` }}
+      </p>
+      <p>
+        {{
+          lang === "kz"
+            ? ``
+            : ``
+        }}
+      </p>
+      <p>
+        {{
+          lang === "kz"
+            ? ``
+            : ``
+        }}
+      </p>
+      <ul>
+        <h2>
+          {{ lang === "kz" ? "Іс-шараға қатысты:" : "В мероприятии приняли участие:" }}
+        </h2>
+        <li>
+          {{
+            lang === "kz"
+              ? ``
+              : ``
+          }}
+        </li>
+        <li>
+          {{
+            lang === "kz"
+              ? ``
+              : ``
+          }}
+        </li>
+      </ul>
+      <p>
+        {{
+          lang === "kz"
+            ? ``
+            : ``
+        }}
+      </p>
+      <div class="gallery">
+        <img
+          v-for="(src, index) in images"
+          :key="index"
+          :src="src"
+          alt="methodImage"
+          class="gallery-image"
+        />
+      </div>
+    </div>
+    <div class="bottomP"></div>
+  </div>
+</template>

@@ -4,6 +4,7 @@ import { RouterView } from 'vue-router'
 
 import Header from './components/MainHeader.vue'  
 import SideBar from './components/SideBar.vue'
+// import NotFound from './views/NotFound.vue'
 
 const lang = ref('kz')
 
@@ -32,7 +33,7 @@ const toggleSidebar = () => {
   />
   
   <RouterView v-slot="{ Component }">
-    <component :is="Component" :lang="lang" />
+    <component :is="Component" :lang="lang"/>
   </RouterView>
 </template>
 
