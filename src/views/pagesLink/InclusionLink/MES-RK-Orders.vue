@@ -15,13 +15,13 @@
         </h1>
       <iframe
         class="pdf-viewer"
-        src="/pages/method/v2200026513.28-06-2024.rus_.pdf"
+        src="/pages/Inclusion/v2200026513.28-06-2024.rus_.pdf"
         width="100%"
         height="600px"
       ></iframe>
       <iframe
         class="pdf-viewer"
-        src="/pages/method/v2200026618.28-06-2024.rus_.pdf"
+        src="/pages/Inclusion/v2200026618.28-06-2024.rus_.pdf"
         width="100%"
         height="600px"
       ></iframe>
@@ -31,14 +31,6 @@
 </template>
 
 <style scoped>
-.pdf-viewer {
-  margin-top: 20px;
-  border: 2px solid var(--color-border);
-  border-radius: 8px;
-  overflow: hidden;
-  width: 90%;
-}
-
 .pageFour {
   width: 50%;
 }

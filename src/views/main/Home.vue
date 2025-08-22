@@ -9,7 +9,7 @@
     </span>
     <img src="@/assets/images/logo.png" alt="Мектеп" class="logo-image" /><br />
     <img
-      src="@/assets/images/IMG_20250723_2.jpg"
+      src="@/assets/images/IMG_20250723_2.webp"
       alt="Мектеп"
       class="school-image"
     /><br />

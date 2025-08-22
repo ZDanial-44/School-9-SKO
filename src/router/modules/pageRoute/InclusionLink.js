@@ -19,17 +19,11 @@ function Route(name) {
 export default [
   Route('unlimited-creative'),
   Route('experience-and-internship'),
-  Route('LinkThree'),
-  Route('modo'),
-  Route('PresReliz'),
-  Route('ped-1'),
-  Route('sh-1'),
-  Route('7th-graph'),
-  Route('oq-city'),
-  Route('S9SKO-i'),
-  Route('23-24-Q'),
-  Route('teachers-portfolio'),
-  Route('eng-lessons'),
-  Route('eng-lessons-Q'),
-  Route('OZNO')
+  Route('MES-RK-Orders'),
+  Route('Position-of-inclusion'),
+  Route('order'),
+  Route('work-plan'),
+  Route('working-group'),
+  Route('in-action'),
+  Route('Stars-of-Demeu')
 ]

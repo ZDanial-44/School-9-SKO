@@ -1,7 +1,12 @@
+<script setup>
+import NotFound from '@/views/NotFound.vue';
+defineProps({
+  lang: {
+    type: String,
+    default: 'kz',
+  },
+});
+</script>
 <template>
-    <div>
-        <p class="page pageFour">
-            hjbjkb
-        </p>
-    </div>
+    <NotFound />
 </template>

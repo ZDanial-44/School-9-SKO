@@ -4,6 +4,6 @@
 
 <template>
   <div class="page pageFour">
-    <SpFour/>
+    <SpFour :lang="lang"/>
   </div>
 </template>

@@ -70,7 +70,7 @@ a {
 }
 
 .pageFour {
-  width: 70%;
+  max-width: 1080px;
   padding: 30px;
   margin: auto;
   margin-top: 11%;
@@ -79,6 +79,7 @@ a {
   border-bottom: 8px dashed var(--color-accent);
   letter-spacing: 0.04em;
   line-height: 1.3;
+  align-items: left;
 }
 
 .pageFour li {
@@ -86,8 +87,13 @@ a {
 }
 .pageFour ul {
   padding-top: 10px;
+  padding-bottom: 15px;
   border-top: 2px solid var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
+  width: 90%;
+  margin: auto;
+  text-align: left;
+
 }
 
 .pageFour h1 {
@@ -126,4 +132,13 @@ a {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+
+.pdf-viewer {
+  margin-top: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%;
+  height: 700px;
 }
