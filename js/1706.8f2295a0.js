@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[1706],{1706:function(e,s,p){e.exports=p.p+"img/ped-1_1.7f45ba37.jpeg"}}]);
