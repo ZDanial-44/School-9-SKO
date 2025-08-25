@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[5317],{5317:function(s,c,e){s.exports=e.p+"img/traditions-and-customs3.4c380a72.jpg"}}]);

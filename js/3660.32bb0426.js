@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[3660],{3660:function(e,s,c){e.exports=c.p+"img/professional-competencies3.97c41d44.jpeg"}}]);

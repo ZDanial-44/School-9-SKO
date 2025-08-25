@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[5326],{5326:function(e,s,n){e.exports=n.p+"img/finger-painting1.de43a5b9.jpeg"}}]);
