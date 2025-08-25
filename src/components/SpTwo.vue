@@ -111,7 +111,7 @@ const hasRight = computed(
 
 .news-block__image {
   position: relative;
-  width: 300px;
+  max-width: 270px;
   height: auto;
   display: block;
   z-index: 1;

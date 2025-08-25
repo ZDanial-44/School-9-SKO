@@ -25,5 +25,13 @@ export default [
   Route('work-plan'),
   Route('working-group'),
   Route('in-action'),
-  Route('Stars-of-Demeu')
+  Route('Stars-of-Demeu'),
+  Route('professional-competencies'),
+  Route('education-technologies'),
+  Route('education-practice'),
+  Route('Childrens-Day-celebration'),
+  Route('lesson-development'),
+  Route('education-without-borders'),
+  Route('finger-painting'),
+  Route('experience-exchange')
 ]
