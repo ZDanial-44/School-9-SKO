@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[3003],{23003:function(e,s,u){e.exports=u.p+"img/NO-VAPE-kz1.726d76a2.jpg"}}]);

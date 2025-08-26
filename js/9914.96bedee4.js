@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[9914],{49914:function(e,n,t){t.r(n),t.d(n,{default:function(){return c}});var a=t(56768);function u(e,n){const t=(0,a.g2)("FinalSampleOne");return(0,a.uX)(),(0,a.Wv)(t,{dbName:"attestation",mainImageName:"attestation.png"})}var o=t(71241);const r={},s=(0,o.A)(r,[["render",u]]);var c=s}}]);
+//# sourceMappingURL=9914.96bedee4.js.map

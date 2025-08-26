@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[7868],{7868:function(e,o,s){e.exports=s.p+"img/modo2.f5eed0e3.jpeg"}}]);

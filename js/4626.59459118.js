@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[4626],{4626:function(e,s,o){e.exports=o.p+"img/skills-of-the-young-2025.eeb61613.jpeg"}}]);

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[8895],{18895:function(e,n,u){u.r(n),u.d(n,{default:function(){return l}});var s=u(56768),r=u(24232);const a={class:"pageFour"};var t={__name:"teachers",props:{lang:String},setup(e){return(n,u)=>((0,s.uX)(),(0,s.CE)("div",a,[(0,s.Lk)("h1",null,(0,r.v_)("kz"===e.lang?"2022 жылдың 2 жартыжылдығында педагогтерді аттестаттау":"Аттестация педагогов во 2 полугодии 2022 года"),1)]))}};const c=t;var l=c}}]);
+//# sourceMappingURL=8895.f20074bf.js.map

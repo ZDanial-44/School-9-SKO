@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[3193],{3193:function(n,e,o){o.r(e),o.d(e,{default:function(){return l}});var s=o(6768);function a(n,e){const o=(0,s.g2)("FinalSampleOne");return(0,s.uX)(),(0,s.Wv)(o,{dbName:"psychologist",mainImageNameLang:"psychologist/psychologist-1-{lang}.jpg"})}var c=o(1241);const t={},u=(0,c.A)(t,[["render",a]]);var l=u}}]);
-//# sourceMappingURL=3193.76e5b109.js.map

@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[2026],{2026:function(n,u,e){e.r(u),e.d(u,{default:function(){return l}});var r=e(6768),s=e(4232);const a={class:"pageFour"};var t={__name:"Order-N561",props:{lang:String},setup(n){return(u,e)=>((0,r.uX)(),(0,r.CE)("div",a,[(0,r.Lk)("h1",null,(0,s.v_)("kz"===n.lang?"Бұйрық МОН от 12.11 №561":"Приказ МОН от 12.11.21 №561"),1)]))}};const c=t;var l=c}}]);
-//# sourceMappingURL=2026.e7530f36.js.map

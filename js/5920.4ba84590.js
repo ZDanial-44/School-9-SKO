@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[5920],{5920:function(n,s,u){u.r(s),u.d(s,{default:function(){return c}});var e=u(6768),r=u(4232);const t={class:"pageFour"};var a={__name:"terms-and-conditions",props:{lang:String},setup(n){return(s,u)=>((0,e.uX)(),(0,e.CE)("div",t,[(0,e.Lk)("h1",null,(0,r.v_)("kz"===n.lang?"Педагогтерді аттестаттаудан өткізу қағидалары мен шарттары":"Правила и условия проведения аттестации педагогов"),1)]))}};const o=a;var c=o}}]);
-//# sourceMappingURL=5920.4ba84590.js.map

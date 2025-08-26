@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[4004],{54004:function(e,o,s){e.exports=s.p+"img/rainbow-tour2.1315bac8.jpeg"}}]);

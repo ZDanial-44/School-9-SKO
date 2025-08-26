@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[8223],{8223:function(e,c,s){e.exports=s.p+"img/career-guidance-event.89123ae3.jpeg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[2223],{42223:function(e,s,c){e.exports=c.p+"img/ideal-conditions.2d3d521c.jpg"}}]);

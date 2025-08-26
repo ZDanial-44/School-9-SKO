@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[9673],{9673:function(e,s,u){e.exports=u.p+"img/SenimenBolashaq-ru.1eced376.jpeg"}}]);

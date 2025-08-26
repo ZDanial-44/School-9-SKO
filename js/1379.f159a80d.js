@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[1379],{61379:function(e,n,a){a.r(n),a.d(n,{default:function(){return c}});var u=a(56768);function o(e,n){const a=(0,u.g2)("FinalSampleOne");return(0,u.uX)(),(0,u.Wv)(a,{dbName:"SenimenBolashaq",mainImageNameLang:"SenimenBolashaq/SenimenBolashaq-{lang}.jpeg"})}var s=a(71241);const l={},r=(0,s.A)(l,[["render",o]]);var c=r}}]);
+//# sourceMappingURL=1379.f159a80d.js.map

@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[7888],{37888:function(e,s,c){e.exports=c.p+"img/open-day2.a4fff59c.jpeg"}}]);

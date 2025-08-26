@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[5714],{65714:function(e,s,u){e.exports=u.p+"img/lawImage.56d0a15d.png"}}]);

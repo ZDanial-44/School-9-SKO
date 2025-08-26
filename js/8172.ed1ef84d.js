@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[8172],{8172:function(e,s,o){e.exports=o.p+"img/poetry-contest2.6d52810b.jpg"}}]);

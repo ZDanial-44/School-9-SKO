@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[7598],{17598:function(e,o,s){e.exports=s.p+"img/education-without-borders1.e9f48e59.jpeg"}}]);

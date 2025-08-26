@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[7330],{7330:function(e,u,t){t.r(u),t.d(u,{default:function(){return c}});var n=t(6768),r=t(9239),s={__name:"7th-graph",props:{lang:{type:String,default:"kz"}},setup(e){return(e,u)=>((0,n.uX)(),(0,n.Wv)(r.A))}};const a=s;var c=a}}]);
-//# sourceMappingURL=7330.ad493e81.js.map

@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[1778],{91778:function(e,s,u){e.exports=u.p+"img/zholdau.99551a8a.jpg"}}]);

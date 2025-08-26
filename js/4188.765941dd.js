@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[4188],{4188:function(e,s,u){e.exports=u.p+"img/IMG_20250723_2.5276e90b.webp"}}]);

@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[8026],{8026:function(e,s,c){e.exports=c.p+"img/Firsy-class-parents-Image.c9c8e76a.jpeg"}}]);

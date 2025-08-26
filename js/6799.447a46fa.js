@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[6799],{6799:function(e,o,s){e.exports=s.p+"img/regional-forum3.8dbe700b.jpg"}}]);

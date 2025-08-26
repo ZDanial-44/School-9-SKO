@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[3223],{13223:function(e,s,u){e.exports=u.p+"img/bullying-prevention-kz1.25d89fac.jpg"}}]);

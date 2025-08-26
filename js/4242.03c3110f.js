@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[4242],{1861:function(s,e,u){s.exports=u.p+"img/super-star7.101f0870.jpg"}}]);

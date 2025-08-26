@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[9516],{19516:function(e,c,o){e.exports=o.p+"img/education-technologies3.3deec99e.jpeg"}}]);

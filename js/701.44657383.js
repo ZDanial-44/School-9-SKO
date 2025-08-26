@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[701],{50701:function(s,e,o){s.exports=o.p+"img/world-of-professions3.ac593949.jpeg"}}]);
