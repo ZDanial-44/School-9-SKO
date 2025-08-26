@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkschool9edu"]=self["webpackChunkschool9edu"]||[]).push([[6465],{6465:function(e,s,u){e.exports=u.p+"img/ZIXTO-tour1.433e6709.jpeg"}}]);
