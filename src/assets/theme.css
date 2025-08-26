@@ -66,6 +66,8 @@ a {
 
 .toCenter {
   text-align: center;
+  width: 90%;
+  margin: auto;
 }
 
 .pageFour {

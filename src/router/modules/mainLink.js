@@ -91,7 +91,7 @@ export default [
   },
   {
     name: 'WhereToStudy',
-    path: '/where-to-study',
+    path: '/WhereToStudy',
     component: () => import('@/views/pages/WhereToStudy.vue'),
     meta: { title: { kz: 'Кәсіптік бағдар беру жұмысы', ru: 'Профориентационная работа' } }
   },

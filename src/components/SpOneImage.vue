@@ -101,7 +101,7 @@ function handleMouseMove(e) {
 
 <style scoped>
 .home-text {
-  max-width: 480px;
+  max-width: 530px;
   background-color: var(--color-primary-dark);
   color: var(--color-bg);
   padding: 5px 30px;
