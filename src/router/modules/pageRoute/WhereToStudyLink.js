@@ -28,5 +28,7 @@ export default [
     Route('skills-of-the-young-2025'),
     Route('professions'),
     Route('The-World-of-Professions'),
-    Route('ZIXTO-tour')
+    Route('ZIXTO-tour'),
+    Route('career-guidance'),
+    Route('world-of-professions'),
 ]

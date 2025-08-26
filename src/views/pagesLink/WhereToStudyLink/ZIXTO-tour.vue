@@ -77,9 +77,6 @@ onMounted(loadImages);
 </template>
 
 <style scoped>
-.gallery {
-  grid-template-columns: repeat(3, minmax(50px, 1fr));
-}
 
 .gallery-image {
   max-height: 350px;
