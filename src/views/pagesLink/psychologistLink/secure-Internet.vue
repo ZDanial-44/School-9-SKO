@@ -58,14 +58,14 @@ onMounted(loadImages);
       </p>
       <div class="gallery">
         <img
-          v-for="(src, index) in images"
+          v-for="(src,  index) in images"
           :key="index"
           :src="src"
           alt="methodImage"
           class="gallery-image"
         />
       </div>
-    </div>
+    </div>  
     <div class="bottomP"></div>
   </div>
 </template>
